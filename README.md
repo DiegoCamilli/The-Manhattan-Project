@@ -1,2 +1,2 @@
 # The-Manhattan-Project
-Project oen with Dannon, Jemmy, and Diego
+Project one with Dannon, Jemmy, and Diego
