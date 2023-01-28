@@ -1,0 +1,13 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+ 
+.mdl-layout-title {
+    margin-left: 120px;
+}
+
+#userInfo {
+    text-align: center;
+}
+
