@@ -10,6 +10,7 @@ formEl.addEventListener("submit", function(event) {
 	astroFullUrl = baseAstroUrl + '?sign=' + bdateEl + '&day=today';
 	astroInfo();
 	getMarvelResponse();
+	// printMarvelResult();
 })
 // Astrology API
 function astroInfo(){
@@ -25,11 +26,13 @@ function astroInfo(){
 		.then(response => {
 		return response.json()
 		})
-		.then(data => {
-		console.log(data)  
+		.then(adata => {
+		console.log(adata)  
 		})
 		.catch(err => console.error(err));
+		// printAstroResult(adata);
 }
+
 // Marvel API
 var PRIVATE_KEY = "f91b3a58a26ec07306b4c3d0c67877355fd7e238";
 var PUBLIC_KEY = "89a7be84f8d42e6fc04fc7e7053d8903";
@@ -41,7 +44,7 @@ function getMarvelResponse() {
   var hash = CryptoJS.MD5(ts + PRIVATE_KEY + PUBLIC_KEY).toString();
 
   var baseUrl = 'https://gateway.marvel.com/v1/public/characters';
-  var heroName = randomName(heroNameArray); // wolverine
+  var heroName = randomName(heroNameArray);
 
   // example URL template
   http://gateway.marvel.com/v1/public/characters/<CHARACTER_ID_HERE>?ts=<TIMESTAMP_STRING_HERE>&apikey=<PUBLIC_KEY_HERE>&hash=<MD5_HASH_HERE>
@@ -50,18 +53,39 @@ function getMarvelResponse() {
   // USING FETCH
   fetch(fullUrl).then(function (response) {
     return response.json();
-  }).then(function (data) {
+  }).then(function (mdata) {
+	console.log(mdata)
+	printMarvelResult(mdata);
   });
 };
 
+function printMarvelResult(mresultObject) {
+	var nameEl = document.createElement('h3');
+	nameEl.textContent = mresultObject.data.results[0].name;
 
-// Notes to implement
-// var bbdateEl = document.getElementById('bdate').value;
-// console.log('bdate output', bbdateEl);
+	var descEl = document.createElement('p');
+	descEl.textContent = mresultObject.data.results[0].description;
+
+	var imgEl = document.createElement('img');
+	imgEl.src = mresultObject.data.results[0].thumbnail;
+	
+	var parent = document.querySelector('#mresults');
+	parent.appendChild(nameEl);
+	parent.appendChild(descEl);
+	parent.appendChild(imgEl);
+};
+
+// Function to return random hero
 function randomName(nameArray){
 	return nameArray[Math.floor(Math.random()*nameArray.length)];
 }
 
-var heroNameArray = ['wolverine', 'iron man', 'professor x', 'thor', 'captain america', 'black widow', 'phoenix', 'black panther', 'scarlet witch', 'falcon', 'gamora', 'doctor strange', 'hawkeye', 'hulk', 'daredevil', 'captain marvel'];
 
- 
+// Hero array
+var heroNameArray = ['wolverine', 'iron man', 'professor x', 'thor', 'captain america', 'black widow', 'phoenix', 'black panther', 'scarlet witch', 'falcon', 'doctor strange', 'hawkeye', 'hulk', 'daredevil', 'captain marvel'];
+
+// var dataObj = {mdata,adata}
+// var dataObj_serialized = JSON.stringify(dataObj)
+// localStorage.setItem('dataObj', dataObj_serialized)
+// var dataObj_deserialized = JSON.parse(localStorage.getitem(dataObj))
+// console.log(dataObj_deserialized)
