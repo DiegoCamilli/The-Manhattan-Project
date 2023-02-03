@@ -1,20 +1,20 @@
-
-
 body {
-  font-family:'Tangerine', serif;
-  margin-left: 600px;
+  background:white!important;
+  display:inline-block;
 }
+
 
 h1 {
   text-align: center;
-  margin-left: 550px;
+  margin-top: 80px;
+  margin-left: 250px;
   font-family:'Tangerine', serif;
   text-shadow: 4px 4px 4px #aaa;
 }
 
 h4 {
 
-  margin-left: 120px;
+  margin-left: 10px;
   padding: 10px;
   font-size: 3rem;
   font-family:'Tangerine', serif;
@@ -22,62 +22,54 @@ h4 {
   
 }
 
-ul { 
+li { 
 
-  text-decoration: none;
+  list-style: none;
+
+}
+
+
+button {
+  margin-top: 20px;
+  margin-left: 10px;
+}
+
+
+#userInfo {
   margin-left: 80px;
 }
 
 
-
-
-.mdl-layout-title {
-    margin-left: 120px;
-}
-
-#userInfo {
-    text-align: center;
-}
-
-#mresults {
-    display: flex; 
-}
-
-body {
-    background: blue!important;
-    
-}
-
 .mdl-layout-title {
     font-family: 'Tangerine', serif;
     font-size: 4rem;
-    text-align: center;
+    text-align: center!important;
     margin-left: 240px;
   }
 
-  #mresults {
-    display: flex; 
-  } 
-
-  h1 {
-        text-align: center;
-        font-family: 'Tangerine', serif;
-        text-shadow: 4px 4px 4px #aaa;
-      }
-
-      .demo-card-wide.mdl-card {
+.demo-card-wide.mdl-card {
         width: 800px;
         padding: 5px;
         margin-left: 150px;
         box-shadow: none;
       }
 
-      .demo-card-wide>.mdl-card__title {
+.demo-card-wide>.mdl-card__title {
+        margin-left: 120px;
         color: white;
         height: 176px;
         background: url('https://w0.peakpx.com/wallpaper/104/208/HD-wallpaper-marvel-and-dc-dc-superheroes-marvel-vs-dc-marvel-superheroes.jpg') center / cover;
       }
 
-      .demo-card-wide>.mdl-card__menu {
+.demo-card-wide>.mdl-card__menu {
         color: rgb(252, 248, 248);
       }
+
+      
+.mdl-card__supporting-text {
+        padding-top: 60px;
+        margin-left: 30px;
+      
+      }
+
+      
