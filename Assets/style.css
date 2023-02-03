@@ -1,13 +1,77 @@
-* {
-    margin: 0;
-    padding: 0;
-}
- 
-.mdl-layout-title {
-    margin-left: 120px;
+
+
+body {
+  font-family:'Tangerine', serif;
+  margin-left: 600px;
 }
 
-#userInfo {
-    text-align: center;
+h1 {
+  text-align: center;
+  margin-left: 550px;
+  font-family:'Tangerine', serif;
+  text-shadow: 4px 4px 4px #aaa;
 }
+
+h4 {
+
+  margin-left: 120px;
+  padding: 10px;
+  font-size: 3rem;
+  font-family:'Tangerine', serif;
+  color:black;
+  
+}
+
+ul { 
+
+  text-decoration: none;
+  margin-left: 80px;
+}
+
+
+
+
+.mdl-layout-title {
+  font-family:'Tangerine', serif ;
+  font-size: 4rem;
+  text-align: center;
+  margin-left: 600px;
+}
+
+
+.demo-card-wide.mdl-card {
+  width: 800px;
+  padding: 5px;
+  margin-left: 450px;
+  box-shadow: none;
+}
+.demo-card-wide > .mdl-card__title {
+  color: white;
+  height: 176px;
+  margin-left: 100px;
+  background: url('https://w0.peakpx.com/wallpaper/104/208/HD-wallpaper-marvel-and-dc-dc-superheroes-marvel-vs-dc-marvel-superheroes.jpg') center / cover;
+}
+  .demo-card-wide > .mdl-card__menu {
+  color: rgb(252, 248, 248);
+}
+
+
+.mdl-card__supporting-text {
+  margin-left: 100px;
+}
+
+.mdl-card__actions{
+  margin-left: 100px;
+  
+}
+
+p {
+  text-align: center;
+  margin-left: 750px;
+ }
+
+ .mdl-mini-footer {
+   margin-top: 150px;
+ }
+
 
